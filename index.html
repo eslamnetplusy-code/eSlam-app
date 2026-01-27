@@ -1,171 +1,130 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>إسلام نت بلس | تحميل التطبيق</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إسلام نت بلس</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Tahoma, Arial, sans-serif;
-            background: linear-gradient(135deg, #1e88e5, #42a5f5);
-            color: #333;
-        }
-
-        .container {
-            max-width: 420px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .logo {
-            width: 110px;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            margin: 10px 0;
-            font-size: 22px;
-        }
-
-        p {
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .download-btn {
-            display: block;
-            background: linear-gradient(135deg, #1e88e5, #42a5f5);
-            color: #fff;
-            padding: 14px;
-            margin: 10px 0;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .download-btn:hover {
-            opacity: 0.9;
-        }
-
-        .version {
-            font-size: 13px;
-            color: #777;
-            margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 12px;
-            color: #fff;
-            margin-top: 10px;
-        }
-
-        /* الوضع الليلي */
-        .dark {
-            background: #121212 !important;
-            color: #fff !important;
-        }
-
-        .dark .card {
-            background: #1e1e1e;
-            color: #fff;
-        }
-
-        .dark .download-btn {
-            background: linear-gradient(135deg, #000, #333);
-        }
-
-        /* زر الوضع الليلي */
-        .dark-btn {
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            padding: 10px 14px;
-            border: none;
-            border-radius: 50%;
-            background: #000;
-            color: #fff;
-            font-size: 16px;
-        }
-    </style>
+<style>
+body{
+    margin:0;
+    font-family:Tahoma,Arial;
+    background:linear-gradient(135deg,#1e88e5,#0d47a1);
+    color:#333;
+}
+.container{
+    max-width:420px;
+    margin:80px auto;
+    padding:20px;
+}
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    margin-bottom:20px;
+}
+.logo{
+    width:100px;
+    margin-bottom:15px;
+}
+h1{color:#0d47a1;margin:10px 0;}
+.download-btn{
+    display:block;
+    margin:12px 0;
+    padding:14px;
+    background:linear-gradient(135deg,#1e88e5,#42a5f5);
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+}
+.dark-toggle{
+    position:fixed;
+    top:15px;
+    left:15px;
+    background:#000;
+    color:#fff;
+    border:none;
+    padding:10px 14px;
+    border-radius:25px;
+}
+.footer{
+    font-size:13px;
+    color:#eee;
+    text-align:center;
+    margin-top:15px;
+}
+.dark{
+    background:#121212!important;
+    color:#fff!important;
+}
+.dark .card{background:#1e1e1e;color:#fff;}
+.dark h1{color:#90caf9;}
+</style>
 </head>
 
 <body>
 
-<button class="dark-btn" onclick="toggleDark()">🌙</button>
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
 
 <div class="container">
 
-    <div class="card">
-        <img src="logo.png" class="logo" alt="إسلام نت بلس">
-        <h1>إسلام نت بلس</h1>
-        <p>
-            تطبيق دفع إلكتروني شامل<br>
-            واجهة بسيطة – أداء سريع – خفيف على الجهاز
-        </p>
-        <div class="version">الإصدار الحالي: v1.0.0</div>
-    </div>
+<div class="card">
+    <img src="logo.png" class="logo">
+    <h1>إسلام نت بلس</h1>
+    <p>منصة إسلامية رقمية متكاملة</p>
+</div>
 
-    <div class="card">
-        <h2>تحميل التطبيق</h2>
-        <a class="download-btn" href="eslam-net-plus.apk" download>
-            ⬇️ تحميل APK
-        </a>
-    </div>
+<div class="card">
+    <a class="download-btn"
+       href="https://github.com/eslamnetplusy-code/eSlam-app/releases/latest/download/eslam-net-plus.apk">
+       ⬇️ تحميل التطبيق
+    </a>
 
-    <div class="card">
-        <h2>مشاركة التطبيق</h2>
+    <a class="download-btn"
+       href="https://wa.me/?text=حمّل تطبيق إسلام نت بلس الآن 👇%0Ahttps://eslamnetplusy-code.github.io/eSlam-app/"
+       target="_blank">
+       📲 مشاركة عبر واتساب
+    </a>
 
-        <a class="download-btn"
-           href="https://wa.me/?text=حمّل تطبيق إسلام نت بلس الآن 👇%0Ahttps://eslamnetplusy-code.github.io/eSlam-app/"
-           target="_blank">
-            📲 مشاركة عبر واتساب
-        </a>
+    <a class="download-btn" onclick="copyLink()">🔗 نسخ رابط التطبيق</a>
 
-        <a class="download-btn" href="#" onclick="copyLink()">
-            🔗 نسخ رابط التطبيق
-        </a>
-    </div>
+    <a class="download-btn" href="updates.html">🧾 سجل التحديثات</a>
+</div>
+
+<div class="card">
+    <a class="download-btn" href="https://eslam.yrbso.net/" target="_blank">🌐 الموقع الرسمي</a>
+    <a class="download-btn" href="https://www.facebook.com/share/1BY3gEy3Gc/" target="_blank">📘 فيسبوك</a>
+    <a class="download-btn" href="https://eslam.yrbso.net/terms?eslam" target="_blank">🔒 سياسة الخصوصية</a>
+</div>
+
+<div class="footer">
+    © 2026 إسلام نت بلس
+</div>
 
 </div>
 
-<footer>
-    © 2026 إسلام نت بلس
-</footer>
-
 <script>
-    // الوضع الليلي
-    function toggleDark() {
-        document.body.classList.toggle("dark");
-    }
+function copyLink(){
+    navigator.clipboard.writeText("https://eslamnetplusy-code.github.io/eSlam-app/");
+    alert("✅ تم نسخ رابط التطبيق");
+}
 
-    // نسخ الرابط
-    function copyLink() {
-        navigator.clipboard.writeText("https://eslamnetplusy-code.github.io/eSlam-app/");
-        alert("✅ تم نسخ رابط التطبيق");
-    }
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
 
-    // تنبيه تحديث (جاهز للإصدارات القادمة)
-    const currentVersion = "1.0.0";
-    const latestVersion = "1.0.0"; // غيّرها عند إصدار جديد
+/* نظام التحديث */
+const currentVersion = "1.0.0";
+const latestVersion  = "1.0.0"; // غيّرها عند كل تحديث
 
-    if (currentVersion !== latestVersion) {
-        alert("🚀 يوجد إصدار أحدث من تطبيق إسلام نت بلس، يرجى التحديث.");
-    }
+if(currentVersion !== latestVersion){
+    alert("🚀 يوجد إصدار جديد من تطبيق إسلام نت بلس!");
+}
 </script>
 
 </body>
-  </html>
-  
+</html>
