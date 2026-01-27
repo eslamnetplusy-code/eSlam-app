@@ -1,19 +1,13 @@
-self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open("eslam-net-plus-v1").then(cache => {
-      return cache.addAll([
-        "./",
-        "./index.html",
-        "./logo.png"
-      ]);
-    })
-  );
+self.addEventListener("install", (e) => {
+  self.skipWaiting();
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener("activate", (e) => {
+  clients.claim();
+});
+
+self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+    fetch(event.request).catch(() => caches.match("index.html"))
   );
 });
