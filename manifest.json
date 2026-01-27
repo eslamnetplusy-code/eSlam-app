@@ -1,11 +1,12 @@
 {
-  "name": "إسلام نت بلس",
-  "short_name": "Islam Net Plus",
-  "start_url": "./index.html",
+  "name": "إسلام بلس",
+  "short_name": "إسلام نت",
+  "description": "منصة  رقمية متكاملة",
+  "start_url": "/eSlam-app/index.html",
+  "scope": "/eSlam-app/",
   "display": "standalone",
   "background_color": "#0d47a1",
   "theme_color": "#0d47a1",
-  "orientation": "portrait",
   "icons": [
     {
       "src": "logo.png",
