@@ -1,138 +1,136 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>إسلام بلس</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>إسلام بلس</title>
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d47a1">
 
-<!-- PWA -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0d47a1">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Cairo", sans-serif;
+            background: linear-gradient(180deg, #0d47a1, #1976d2);
+            color: #fff;
+        }
 
-<style>
-body{
-    margin:0;
-    font-family:Tahoma,Arial;
-    background:linear-gradient(135deg,#1e88e5,#0d47a1);
-    color:#333;
-}
-.container{
-    max-width:420px;
-    margin:80px auto;
-    padding:20px;
-}
-.card{
-    background:#fff;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-    margin-bottom:20px;
-}
-.logo{
-    width:100px;
-    margin-bottom:15px;
-}
-h1{color:#0d47a1;margin:10px 0;}
-.download-btn{
-    display:block;
-    margin:12px 0;
-    padding:14px;
-    background:linear-gradient(135deg,#1e88e5,#42a5f5);
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
-    font-size:16px;
-    font-weight:bold;
-}
-.dark-toggle{
-    position:fixed;
-    top:15px;
-    left:15px;
-    background:#000;
-    color:#fff;
-    border:none;
-    padding:10px 14px;
-    border-radius:25px;
-}
-.footer{
-    font-size:13px;
-    color:#eee;
-    text-align:center;
-    margin-top:15px;
-}
-.dark{
-    background:#121212!important;
-    color:#fff!important;
-}
-.dark .card{background:#1e1e1e;color:#fff;}
-.dark h1{color:#90caf9;}
-</style>
+        .container {
+            padding: 15px;
+            max-width: 480px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            color: #0d47a1;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: linear-gradient(90deg, #1e88e5, #42a5f5);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
 
-<button class="dark-toggle" onclick="toggleDark()">🌙</button>
-
 <div class="container">
 
-<div class="card">
-    <img src="logo.png" class="logo" alt="إسلام  بلس">
-    <h1>إسلام نت بلس</h1>
-    <p>منصة  رقمية متكاملة</p>
+    <!-- العنوان -->
+    <div class="card">
+        <h1>إسلام نت بلس</h1>
+        <p>منصة رقمية متكاملة</p>
+    </div>
+
+    <!-- أزرار التطبيق -->
+    <div class="card">
+        <a class="btn" href="https://github.com/eslamnetplusy-code/eSlam-app/releases/latest/download/eslam-net-plus.apk">
+            ⬇️ تحميل التطبيق
+        </a>
+
+        <a class="btn" href="https://wa.me/782666791">
+            💬 خدمة العملاء (واتساب)
+        </a>
+
+        <a class="btn" href="https://wa.me/?text=حمّل%20تطبيق%20إسلام%20نت%20بلس%20من%20هنا:%20https://eslamnetplusy-code.github.io/eSlam-app/">
+            📲 مشاركة عبر واتساب
+        </a>
+
+        <a class="btn" href="#" onclick="copyLink()">
+            🔗 نسخ رابط التطبيق
+        </a>
+
+        <a class="btn" href="https://github.com/eslamnetplusy-code/eSlam-app/releases">
+            🧾 سجل التحديثات
+        </a>
+    </div>
+
+    <!-- روابط -->
+    <div class="card">
+        <a class="btn" href="https://eslam.yrbso.net/">
+            🌐 الموقع الرسمي
+        </a>
+
+        <a class="btn" href="https://www.facebook.com/share/1BY3gEy3Gc/">
+            📘 فيسبوك
+        </a>
+
+        <a class="btn" href="https://eslam.yrbso.net/terms?eslam">
+            🔒 سياسة الخصوصية
+        </a>
+    </div>
+
+    <footer>
+        © 2026 إسلام  بلس
+    </footer>
+
 </div>
 
-<div class="card">
-    <a class="download-btn"
-       href="https://github.com/eslamnetplusy-code/eSlam-app/releases/latest/download/eslam-net-plus.apk">
-       ⬇️ تحميل التطبيق
-    </a>
-
-    <a class="download-btn"
-       href="https://wa.me/782666791?text=مرحبًا، أحتاج مساعدة بخصوص تطبيق إسلام  بلس"
-       target="_blank">
-       💬 خدمة العملاء (واتساب)
-    </a>
-
-    <a class="download-btn"
-       href="https://wa.me/?text=حمّل تطبيق إسلام بلس الآن 👇%0Ahttps://eslamnetplusy-code.github.io/eSlam-app/"
-       target="_blank">
-       📲 مشاركة عبر واتساب
-    </a>
-
-    <a class="download-btn" onclick="copyLink()">🔗 نسخ رابط التطبيق</a>
-
-    <a class="download-btn" href="updates.html">🧾 سجل التحديثات</a>
-</div>
-
-<div class="card">
-    <a class="download-btn" href="https://eslam.yrbso.net/" target="_blank">🌐 الموقع الرسمي</a>
-    <a class="download-btn" href="https://www.facebook.com/share/1BY3gEy3Gc/" target="_blank">📘 فيسبوك</a>
-    <a class="download-btn" href="https://eslam.yrbso.net/terms?eslam" target="_blank">🔒 سياسة الخصوصية</a>
-</div>
-
-<div class="footer">
-    © 2026 إسلام  بلس
-</div>
-
-</div>
-
+<!-- نسخ الرابط -->
 <script>
-function copyLink(){
-    navigator.clipboard.writeText("https://eslamnetplusy-code.github.io/eSlam-app/");
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
     alert("✅ تم نسخ رابط التطبيق");
 }
+</script>
 
-function toggleDark(){
-    document.body.classList.toggle("dark");
-}
-
-/* تسجيل Service Worker */
+<!-- Service Worker -->
+<script>
 if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
+    navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker Registered"));
 }
 </script>
 
 </body>
-</html>
+    </html>
+        
