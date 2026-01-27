@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>إسلام بلس</title>
 
-  <!-- PWA -->
+  <!-- Mobile & PWA -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1e88e5">
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1976d2">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="إسلام بلس">
-  <link rel="manifest" href="manifest.json">
 
-  <!-- أيقونة -->
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
 
@@ -20,7 +18,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont;
-      background: linear-gradient(180deg, #1976d2, #42a5f5);
+      background: linear-gradient(180deg, #1565c0, #42a5f5);
       color: #fff;
     }
 
@@ -31,42 +29,53 @@
     }
 
     .card {
-      background: #fff;
-      color: #000;
-      border-radius: 18px;
+      background: #ffffff;
+      color: #0d47a1;
+      border-radius: 20px;
       padding: 20px;
       margin-bottom: 18px;
       text-align: center;
     }
 
+    .logo {
+      width: 90px;
+      margin-bottom: 10px;
+    }
+
     h1 {
-      margin: 0;
-      color: #1565c0;
+      margin: 5px 0;
     }
 
     .subtitle {
-      margin-top: 8px;
       color: #555;
+      font-size: 15px;
     }
 
     .btn {
       display: block;
       width: 100%;
       margin: 12px 0;
-      padding: 16px;
+      padding: 15px;
       border-radius: 30px;
-      background: #2196f3;
+      background: linear-gradient(90deg, #1e88e5, #42a5f5);
       color: #fff;
       text-decoration: none;
       font-size: 16px;
       font-weight: bold;
+      border: none;
     }
 
     .btn:active {
       opacity: 0.85;
     }
 
-    .footer {
+    .note {
+      font-size: 14px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    footer {
       text-align: center;
       font-size: 13px;
       color: #e3f2fd;
@@ -76,75 +85,84 @@
 </head>
 
 <body>
-  <div class="container">
 
-    <!-- العنوان -->
-    <div class="card">
-      <img src="logo.png" width="80" alt="إسلام بلس">
-      <h1>إسلام بلس</h1>
-      <div class="subtitle">منصة رقمية متكاملة</div>
+<div class="container">
+
+  <!-- العنوان -->
+  <div class="card">
+    <img src="logo.png" class="logo" alt="إسلام بلس">
+    <h1>إسلام بلس</h1>
+    <div class="subtitle">تطبيق إسلامي يعمل مباشرة داخل المتصفح</div>
+  </div>
+
+  <!-- أزرار التطبيق -->
+  <div class="card" id="appButtons">
+
+    <!-- زر تحميل أندرويد (يختفي على iPhone) -->
+    <a class="btn" id="apkBtn" href="eslam-net-plus.apk" download>
+      ⬇️ تحميل التطبيق (أندرويد)
+    </a>
+
+    <!-- ملاحظة لمستخدمي iPhone -->
+    <div class="note" id="iosNote" style="display:none">
+      📱 هذا التطبيق يعمل مباشرة داخل المتصفح على iPhone<br>
+      لا حاجة لتحميل أي ملف
     </div>
 
-    <!-- أزرار التطبيق -->
-    <div class="card">
+    <a class="btn" href="https://wa.me/782666791" target="_blank">
+      💬 خدمة العملاء (واتساب)
+    </a>
 
-      <!-- تحميل Android فقط -->
-      <a class="btn" href="eslam-net-plus.apk" download>
-        ⬇️ تحميل التطبيق (أندرويد)
-      </a>
+    <a class="btn" href="https://wa.me/?text=استخدم%20تطبيق%20إسلام%20بلس%20من%20هنا:%20https://eslamnetplusy-code.github.io/eSlam-app/" target="_blank">
+      📲 مشاركة التطبيق
+    </a>
 
-      <!-- واتساب -->
-      <a class="btn" href="https://wa.me/782666791" target="_blank">
-        💬 خدمة العملاء (واتساب)
-      </a>
-
-      <!-- مشاركة -->
-      <a class="btn" href="https://wa.me/?text=https://eslamnetplusy-code.github.io/eSlam-app/" target="_blank">
-        📲 مشاركة التطبيق
-      </a>
-
-      <!-- نسخ الرابط -->
-      <a class="btn" href="#" onclick="copyLink(); return false;">
-        🔗 نسخ رابط التطبيق
-      </a>
-
-      <!-- سجل التحديثات -->
-      <a class="btn" href="updates.html">
-        🧾 سجل التحديثات
-      </a>
-    </div>
-
-    <!-- روابط -->
-    <div class="card">
-      <a class="btn" href="https://eslam.yrbso.net/" target="_blank">
-        🌐 الموقع الرسمي
-      </a>
-
-      <a class="btn" href="https://www.facebook.com/share/1BY3gEy3Gc/" target="_blank">
-        📘 فيسبوك
-      </a>
-
-      <a class="btn" href="https://eslam.yrbso.net/terms?eslam" target="_blank">
-        🔒 سياسة الخصوصية
-      </a>
-    </div>
-
-    <div class="footer">
-      © 2026 إسلام بلس
-    </div>
+    <a class="btn" href="updates.html">
+      🧾 سجل التحديثات
+    </a>
 
   </div>
 
-  <!-- Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
-    }
+  <!-- روابط -->
+  <div class="card">
+    <a class="btn" href="https://eslam.yrbso.net/" target="_blank">
+      🌐 الموقع الرسمي
+    </a>
 
-    function copyLink() {
-      navigator.clipboard.writeText(window.location.href);
-      alert('تم نسخ رابط التطبيق');
-    }
-  </script>
+    <a class="btn" href="https://www.facebook.com/share/1BY3gEy3Gc/" target="_blank">
+      📘 فيسبوك
+    </a>
+
+    <a class="btn" href="https://eslam.yrbso.net/terms?eslam" target="_blank">
+      🔒 سياسة الخصوصية
+    </a>
+  </div>
+
+  <footer>
+    © 2026 إسلام بلس
+  </footer>
+
+</div>
+
+<!-- Service Worker -->
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+</script>
+
+<!-- كشف iPhone وتحسين التجربة -->
+<script>
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isIOS) {
+    const apkBtn = document.getElementById("apkBtn");
+    const iosNote = document.getElementById("iosNote");
+    if (apkBtn) apkBtn.style.display = "none";
+    if (iosNote) iosNote.style.display = "block";
+  }
+</script>
+
 </body>
-</html>
+  </html>
+  
