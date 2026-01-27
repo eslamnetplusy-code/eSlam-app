@@ -1,10 +1,9 @@
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open("islam-net-plus-v1").then(cache => {
+    caches.open("eslam-net-plus-v1").then(cache => {
       return cache.addAll([
         "./",
         "./index.html",
-        "./updates.html",
         "./logo.png"
       ]);
     })
