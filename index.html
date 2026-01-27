@@ -1,159 +1,150 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>إسلام بلس</title>
 
-<title>إسلام بلس</title>
+  <!-- PWA -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e88e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="إسلام بلس">
+  <link rel="manifest" href="manifest.json">
 
-<!-- PWA -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0d47a1">
+  <!-- أيقونة -->
+  <link rel="icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
 
-<style>
-body{
-  margin:0;
-  font-family:Tahoma,Arial,sans-serif;
-  background:linear-gradient(180deg,#0d47a1,#1976d2);
-  color:#fff;
-}
-.container{
-  max-width:420px;
-  margin:auto;
-  padding:20px;
-}
-.card{
-  background:#fff;
-  color:#0d47a1;
-  border-radius:20px;
-  padding:20px;
-  margin-bottom:20px;
-  text-align:center;
-}
-.logo{
-  width:90px;
-  margin-bottom:10px;
-}
-h1{
-  margin:10px 0 5px;
-}
-p{
-  margin:0;
-  font-size:15px;
-  color:#333;
-}
-.btn{
-  display:block;
-  width:100%;
-  padding:15px;
-  margin:10px 0;
-  border-radius:30px;
-  text-decoration:none;
-  font-size:16px;
-  background:linear-gradient(90deg,#1e88e5,#42a5f5);
-  color:#fff;
-  font-weight:bold;
-  border:none;
-}
-.btn:active{opacity:.9}
-footer{
-  text-align:center;
-  font-size:13px;
-  opacity:.8;
-}
-</style>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+      background: linear-gradient(180deg, #1976d2, #42a5f5);
+      color: #fff;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    .card {
+      background: #fff;
+      color: #000;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #1565c0;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: #555;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 12px 0;
+      padding: 16px;
+      border-radius: 30px;
+      background: #2196f3;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .btn:active {
+      opacity: 0.85;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #e3f2fd;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
+    <!-- العنوان -->
+    <div class="card">
+      <img src="logo.png" width="80" alt="إسلام بلس">
+      <h1>إسلام بلس</h1>
+      <div class="subtitle">منصة رقمية متكاملة</div>
+    </div>
 
-  <!-- العنوان -->
-  <div class="card">
-    <img src="logo.png" class="logo" alt="إسلام بلس">
-    <h1>إسلام  بلس</h1>
-    <p>منصة رقمية  متكاملة</p>
+    <!-- أزرار التطبيق -->
+    <div class="card">
+
+      <!-- تحميل Android فقط -->
+      <a class="btn" href="eslam-net-plus.apk" download>
+        ⬇️ تحميل التطبيق (أندرويد)
+      </a>
+
+      <!-- واتساب -->
+      <a class="btn" href="https://wa.me/782666791" target="_blank">
+        💬 خدمة العملاء (واتساب)
+      </a>
+
+      <!-- مشاركة -->
+      <a class="btn" href="https://wa.me/?text=https://eslamnetplusy-code.github.io/eSlam-app/" target="_blank">
+        📲 مشاركة التطبيق
+      </a>
+
+      <!-- نسخ الرابط -->
+      <a class="btn" href="#" onclick="copyLink(); return false;">
+        🔗 نسخ رابط التطبيق
+      </a>
+
+      <!-- سجل التحديثات -->
+      <a class="btn" href="updates.html">
+        🧾 سجل التحديثات
+      </a>
+    </div>
+
+    <!-- روابط -->
+    <div class="card">
+      <a class="btn" href="https://eslam.yrbso.net/" target="_blank">
+        🌐 الموقع الرسمي
+      </a>
+
+      <a class="btn" href="https://www.facebook.com/share/1BY3gEy3Gc/" target="_blank">
+        📘 فيسبوك
+      </a>
+
+      <a class="btn" href="https://eslam.yrbso.net/terms?eslam" target="_blank">
+        🔒 سياسة الخصوصية
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2026 إسلام بلس
+    </div>
+
   </div>
 
-  <!-- الأزرار -->
-  <div class="card">
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
 
-    <!-- زر التثبيت الرسمي -->
-    <button id="installBtn" class="btn" style="display:none">
-      📲 تثبيت التطبيق
-    </button>
-
-    <a class="btn"
-       href="https://github.com/eslamnetplusy-code/eSlam-app/releases/latest/download/eslam-net-plus.apk">
-       ⬇️ تحميل التطبيق (APK)
-    </a>
-
-    <a class="btn"
-       href="https://wa.me/782666791"
-       target="_blank">
-       💬 خدمة العملاء (واتساب)
-    </a>
-
-    <a class="btn"
-       href="https://wa.me/?text=حمّل%20تطبيق%20إسلام%20نت%20بلس%20من%20هنا:%20https://eslamnetplusy-code.github.io/eSlam-app/"
-       target="_blank">
-       📲 مشاركة عبر واتساب
-    </a>
-
-    <a class="btn" href="updates.html">
-       🧾 سجل التحديثات
-    </a>
-  </div>
-
-  <!-- روابط -->
-  <div class="card">
-    <a class="btn" href="https://eslam.yrbso.net/" target="_blank">
-      🌐 الموقع الرسمي
-    </a>
-
-    <a class="btn" href="https://www.facebook.com/share/1BY3gEy3Gc/" target="_blank">
-      📘 فيسبوك
-    </a>
-
-    <a class="btn" href="https://eslam.yrbso.net/terms?eslam" target="_blank">
-      🔒 سياسة الخصوصية
-    </a>
-  </div>
-
-  <footer>
-    © 2026 إسلام بلس
-  </footer>
-
-</div>
-
-<!-- Service Worker -->
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
-}
-</script>
-
-<!-- زر التثبيت الرسمي -->
-<script>
-let deferredPrompt;
-const installBtn = document.getElementById("installBtn");
-
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  installBtn.style.display = "block";
-});
-
-installBtn.addEventListener("click", async () => {
-  installBtn.style.display = "none";
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt = null;
-  }
-});
-</script>
-
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href);
+      alert('تم نسخ رابط التطبيق');
+    }
+  </script>
 </body>
-  </html>
-  
+</html>
