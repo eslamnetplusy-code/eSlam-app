@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>إسلام نت بلس</title>
+  <title>إسلام بلس</title>
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d47a1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
 
   <style>
     body {
       margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      font-family: "Tahoma", Arial, sans-serif;
+      background: linear-gradient(180deg, #0d47a1, #1976d2);
       color: #fff;
-      text-align: center;
     }
 
     .container {
@@ -29,40 +27,49 @@
     .card {
       background: #fff;
       color: #0d47a1;
-      border-radius: 25px;
-      padding: 25px;
+      border-radius: 20px;
+      padding: 20px;
       margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 90px;
+      margin-bottom: 10px;
     }
 
     h1 {
-      margin: 10px 0;
+      margin: 10px 0 5px;
+      font-size: 26px;
     }
 
-    .subtitle {
-      color: #555;
+    p {
+      margin: 0;
+      font-size: 15px;
+      color: #333;
     }
 
     .btn {
       display: block;
       width: 100%;
       padding: 15px;
-      margin: 12px 0;
-      border-radius: 40px;
-      background: linear-gradient(135deg, #2196f3, #1e88e5);
-      color: #fff;
+      margin: 10px 0;
+      border-radius: 30px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
+      background: linear-gradient(90deg, #1e88e5, #42a5f5);
+      color: #fff;
       font-weight: bold;
     }
 
-    .btn:hover {
+    .btn:active {
       opacity: 0.9;
     }
 
     footer {
-      font-size: 14px;
+      text-align: center;
+      font-size: 13px;
       opacity: 0.8;
-      margin-top: 10px;
     }
   </style>
 </head>
@@ -71,40 +78,33 @@
 
   <div class="container">
 
+    <!-- العنوان -->
     <div class="card">
-      <h1>إسلام نت بلس</h1>
-      <p class="subtitle">منصة رقمية متكاملة</p>
+      <img src="logo.png" class="logo" alt="إسلام  بلس">
+      <h1>إسلام  بلس</h1>
+      <p>منصة رقمية متكاملة</p>
     </div>
 
+    <!-- الأزرار الرئيسية -->
     <div class="card">
-
-      <!-- تحميل التطبيق -->
-      <a class="btn" href="eslam-net-plus.apk">
+      <a class="btn" href="https://github.com/eslamnetplusy-code/eSlam-app/releases/latest/download/eslam-net-plus.apk">
         ⬇️ تحميل التطبيق
       </a>
 
-      <!-- واتساب -->
       <a class="btn" href="https://wa.me/782666791" target="_blank">
         💬 خدمة العملاء (واتساب)
       </a>
 
-      <!-- مشاركة -->
-      <a class="btn" href="https://wa.me/?text=حمّل تطبيق إسلام نت بلس الآن 🔥">
+      <a class="btn" href="https://wa.me/?text=حمّل تطبيق إسلام نت بلس:%20https://eslamnetplusy-code.github.io/eSlam-app/" target="_blank">
         📲 مشاركة عبر واتساب
       </a>
 
-      <!-- نسخ الرابط -->
-      <a class="btn" href="#" onclick="copyLink()">
-        🔗 نسخ رابط التطبيق
-      </a>
-
-      <!-- سجل التحديثات -->
       <a class="btn" href="updates.html">
         🧾 سجل التحديثات
       </a>
-
     </div>
 
+    <!-- روابط خارجية -->
     <div class="card">
       <a class="btn" href="https://eslam.yrbso.net/" target="_blank">
         🌐 الموقع الرسمي
@@ -120,23 +120,18 @@
     </div>
 
     <footer>
-      © 2026 إسلام نت بلس
+      © 2026 إسلام  بلس
     </footer>
 
   </div>
 
-  <!-- Service Worker -->
+  <!-- تسجيل Service Worker -->
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js");
     }
-
-    function copyLink() {
-      navigator.clipboard.writeText(window.location.href);
-      alert("تم نسخ الرابط ✅");
-    }
   </script>
 
 </body>
-    </html>
-    
+  </html>
+  
