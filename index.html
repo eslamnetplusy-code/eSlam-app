@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>إسلام نت بلس</title>
+
+<title>إسلام بلس</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d47a1">
 
 <style>
 body{
@@ -73,9 +78,9 @@ h1{color:#0d47a1;margin:10px 0;}
 <div class="container">
 
 <div class="card">
-    <img src="logo.png" class="logo">
+    <img src="logo.png" class="logo" alt="إسلام  بلس">
     <h1>إسلام نت بلس</h1>
-    <p>منصة إسلامية رقمية متكاملة</p>
+    <p>منصة  رقمية متكاملة</p>
 </div>
 
 <div class="card">
@@ -85,7 +90,13 @@ h1{color:#0d47a1;margin:10px 0;}
     </a>
 
     <a class="download-btn"
-       href="https://wa.me/?text=حمّل تطبيق إسلام نت بلس الآن 👇%0Ahttps://eslamnetplusy-code.github.io/eSlam-app/"
+       href="https://wa.me/782666791?text=مرحبًا، أحتاج مساعدة بخصوص تطبيق إسلام  بلس"
+       target="_blank">
+       💬 خدمة العملاء (واتساب)
+    </a>
+
+    <a class="download-btn"
+       href="https://wa.me/?text=حمّل تطبيق إسلام بلس الآن 👇%0Ahttps://eslamnetplusy-code.github.io/eSlam-app/"
        target="_blank">
        📲 مشاركة عبر واتساب
     </a>
@@ -102,7 +113,7 @@ h1{color:#0d47a1;margin:10px 0;}
 </div>
 
 <div class="footer">
-    © 2026 إسلام نت بلس
+    © 2026 إسلام  بلس
 </div>
 
 </div>
@@ -117,12 +128,9 @@ function toggleDark(){
     document.body.classList.toggle("dark");
 }
 
-/* نظام التحديث */
-const currentVersion = "1.0.0";
-const latestVersion  = "1.0.0"; // غيّرها عند كل تحديث
-
-if(currentVersion !== latestVersion){
-    alert("🚀 يوجد إصدار جديد من تطبيق إسلام نت بلس!");
+/* تسجيل Service Worker */
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
 }
 </script>
 
