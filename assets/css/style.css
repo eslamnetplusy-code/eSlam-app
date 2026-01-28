@@ -1,12 +1,7 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: "Cairo", sans-serif;
-  background: linear-gradient(180deg, #1e88e5, #0d47a1);
-  min-height: 100vh;
+  font-family: Cairo, sans-serif;
+  background: linear-gradient(180deg,#1e88e5,#0d47a1);
 }
 
 .container {
@@ -18,55 +13,90 @@ body {
 .card {
   background: #fff;
   border-radius: 22px;
-  padding: 22px;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin-bottom: 18px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
-.header h1 {
-  margin: 0;
+.app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+}
+
+.app-card h1 {
+  margin: 10px 0 5px;
   color: #1e88e5;
-  font-size: 26px;
 }
 
-.header p {
-  margin-top: 8px;
+.desc {
+  color: #555;
+  font-size: 14px;
+}
+
+.rating {
+  font-size: 22px;
+  color: #ffb300;
+}
+
+.rating p {
+  font-size: 14px;
   color: #555;
 }
 
 button {
   width: 100%;
-  padding: 16px;
-  margin: 12px 0;
+  padding: 14px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(135deg, #2196f3, #1e88e5);
+  margin: 10px 0;
+  background: #1e88e5;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-button:active {
-  transform: scale(0.96);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+.download {
+  background: linear-gradient(135deg,#4caf50,#2e7d32);
+  font-size: 18px;
+  padding: 16px;
+}
+
+.warning {
+  font-size: 13px;
+  color: #c62828;
+}
+
+.downloads h2 {
+  margin: 10px 0 0;
+  color: #1e88e5;
+}
+
+.screenshots img {
+  width: 45%;
+  border-radius: 16px;
+  margin: 5px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.2);
+}
+
+.shots {
+  display: flex;
+  justify-content: center;
+}
+
+.info div {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.security {
+  font-size: 14px;
+  color: #2e7d32;
 }
 
 .footer {
+  text-align: center;
   font-size: 13px;
-  color: #777;
-}
-
-.toast {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #333;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 20px;
-  z-index: 999;
+  color: #eee;
 }
