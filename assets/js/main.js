@@ -1,33 +1,19 @@
-const APP_LINK = window.location.origin;
-const WHATSAPP = "967782666791"; // 
-
 function downloadApp() {
+  const c = document.getElementById("count");
+  if (c) c.innerText = parseInt(c.innerText) + 1;
   window.location.href = "eslam-net-plus.apk";
 }
 
 function openWhatsApp() {
   window.open(
-    `https://wa.me/${WHATSAPP}?text=السلام عليكم، أحتاج مساعدة`,
+    "https://wa.me/9647XXXXXXXX?text=السلام عليكم",
     "_blank"
   );
 }
 
-function shareWhatsApp() {
+function sharePage() {
   window.open(
-    `https://wa.me/?text=حمل تطبيق إسلام نت بلس الآن ${APP_LINK}`,
+    "https://wa.me/?text=تحميل تطبيق إسلام بلس https://netplusy-code.github.io",
     "_blank"
   );
-}
-
-function copyLink() {
-  navigator.clipboard.writeText(APP_LINK);
-  showToast("✅ تم نسخ رابط التطبيق");
-}
-
-function showToast(msg) {
-  const t = document.createElement("div");
-  t.className = "toast";
-  t.innerText = msg;
-  document.body.appendChild(t);
-  setTimeout(() => t.remove(), 2500);
 }
