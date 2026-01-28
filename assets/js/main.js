@@ -1,5 +1,5 @@
 const APP_LINK = window.location.origin;
-const WHATSAPP = "96778266791"; // عدّل الرقم
+const WHATSAPP = "967782666791"; // 
 
 function downloadApp() {
   window.location.href = "eslam-net-plus.apk";
