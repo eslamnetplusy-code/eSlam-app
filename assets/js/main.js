@@ -9,7 +9,7 @@ const APK_FILE = "eslam-net-plus.apk";
 const PAGE_LINK = "https://netplusy-code.github.io";
 
 // رقم واتساب الدعم (عدّل الرقم فقط)
-const WHATSAPP_NUMBER = "967782666791";
+const WHATSAPP_NUMBER = "+967782666791";
 
 
 // ===============================
