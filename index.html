@@ -2,41 +2,81 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>إسلام بلس</title>
+  <title>تحميل تطبيق إسلام نت بلس</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1e88e5">
 
-  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="card header">
-      <h1>إسلام بلس</h1>
-      <p>منصة رقمية متكاملة</p>
-    </div>
-
-    <div class="card">
-      <button onclick="downloadApp()">⬇️ تحميل التطبيق</button>
-      <button onclick="openWhatsApp()">💬 خدمة العملاء (واتساب)</button>
-      <button onclick="shareWhatsApp()">📲 مشاركة عبر واتساب</button>
-      <button onclick="copyLink()">🔗 نسخ رابط التطبيق</button>
-      <button onclick="location.href='updates.html'">🧾 سجل التحديثات</button>
-    </div>
-
-    <div class="card footer">
-      <small>© 2026 Islam Net Plus</small>
-    </div>
-
+  <!-- بطاقة التطبيق -->
+  <div class="card app-card">
+    <img src="assets/img/logo.png" class="app-icon" alt="Islam Net Plus">
+    <h1>إسلام نت بلس</h1>
+    <p class="desc">تطبيق خدمات رقمية متكاملة</p>
   </div>
 
-  <!-- JavaScript -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/pwa.js"></script>
+  <!-- التقييم -->
+  <div class="card rating">
+    ⭐⭐⭐⭐⭐
+    <p>تقييم المستخدمين</p>
+  </div>
 
+  <!-- زر التحميل -->
+  <div class="card">
+    <button class="download" onclick="downloadApp()">
+      ⬇️ تحميل التطبيق (APK)
+    </button>
+    <p class="warning">
+      ⚠️ قد يطلب أندرويد تفعيل التثبيت من مصادر غير معروفة
+    </p>
+  </div>
+
+  <!-- عداد التحميل -->
+  <div class="card downloads">
+    📥 عدد مرات التحميل
+    <h2 id="count">1023</h2>
+  </div>
+
+  <!-- صور التطبيق -->
+  <div class="card screenshots">
+    <h3>صور من داخل التطبيق</h3>
+    <div class="shots">
+      <img src="assets/img/screen1.png" alt="">
+      <img src="assets/img/screen2.png" alt="">
+    </div>
+  </div>
+
+  <!-- معلومات التطبيق -->
+  <div class="card info">
+    <div><strong>الإصدار:</strong> 1.0.0</div>
+    <div><strong>الحجم:</strong> 18 MB</div>
+    <div><strong>آخر تحديث:</strong> 2026/01/28</div>
+    <div><strong>يتطلب:</strong> Android 7+</div>
+  </div>
+
+  <!-- الأمان -->
+  <div class="card security">
+    🔒 ملف آمن 100٪  
+    <br>✔️ خالٍ من الفيروسات  
+    <br>✔️ مصدر رسمي
+  </div>
+
+  <!-- التواصل -->
+  <div class="card">
+    <button onclick="openWhatsApp()">💬 دعم واتساب</button>
+    <button onclick="sharePage()">📲 مشاركة الصفحة</button>
+  </div>
+
+  <div class="footer">
+    © 2026 Islam Net Plus
+  </div>
+
+</div>
+
+<script src="assets/js/main.js"></script>
 </body>
-  </html>
-  
+</html>
