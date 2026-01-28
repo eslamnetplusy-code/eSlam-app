@@ -1,58 +1,42 @@
-// ===============================
 // إعدادات
-// ===============================
-
-// اسم ملف التطبيق (APK) – موجود في جذر المستودع
 const APK_FILE = "eslam-net-plus.apk";
-
-// رقم واتساب (بدون + وبدون مسافات)
 const WHATSAPP_NUMBER = "967782666791";
-
-// رابط الصفحة الحالي
 const PAGE_LINK = window.location.href;
 
 
-// ===============================
 // تحميل التطبيق مع تأكيد
-// ===============================
 function downloadApp() {
-  if (!confirm("هل تريد تحميل تطبيق إسلام بلس الآن؟")) return;
+  if (!confirm("هل تريد تحميل تطبيق إسلام  بلس الآن؟")) return;
 
-  const counter = document.getElementById("count");
-  if (counter) {
-    counter.innerText = parseInt(counter.innerText) + 1;
-  }
+  const c = document.getElementById("count");
+  if (c) c.innerText = parseInt(c.innerText) + 1;
 
   window.location.href = APK_FILE;
 }
 
 
-// ===============================
-// فتح واتساب (حل مضمون للأندرويد)
-// ===============================
+// فتح واتساب (مضمون)
 function openWhatsApp() {
-  const message = encodeURIComponent("السلام عليكم، أحتاج مساعدة");
-
-  const intentUrl =
+  const msg = encodeURIComponent("السلام عليكم، أحتاج مساعدة");
+  window.location.href =
     `intent://send/${WHATSAPP_NUMBER}` +
     `#Intent;scheme=smsto;package=com.whatsapp;` +
     `S.browser_fallback_url=` +
-    encodeURIComponent(
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
-    ) +
+    encodeURIComponent(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`) +
     `;end`;
-
-  window.location.href = intentUrl;
 }
 
 
-// ===============================
-// مشاركة صفحة التحميل
-// ===============================
+// مشاركة الصفحة
 function sharePage() {
-  const text = encodeURIComponent(
-    "تحميل تطبيق إسلام  بلس " + PAGE_LINK
+  window.open(
+    `https://wa.me/?text=${encodeURIComponent("تحميل تطبيق إسلام  بلس " + PAGE_LINK)}`,
+    "_blank"
   );
+}
 
-  window.location.href = `https://wa.me/?text=${text}`;
+
+// فتح روابط التواصل
+function openLink(url) {
+  window.open(url, "_blank");
 }
